@@ -1,0 +1,34 @@
+<!doctype html>
+
+<meta charset="utf-8">
+<title>Hi! o/</title>
+
+<script src="https://d3js.org/d3.v4.min.js" charset="utf-8"></script>
+<script src="node_modules/lodash/lodash.js"></script>
+<script src="node_modules/graphlib/dist/graphlib.core.js"></script>
+<script src="node_modules/dagre/dist/dagre.core.js"></script>
+<script src="node_modules/dagre-d3/dist/dagre-d3.core.js"></script>
+
+<style id="css">
+body {
+  font: 300 14px 'Helvetica Neue', Helvetica;
+}
+
+.node rect {
+  stroke: #333;
+  fill: #fff;
+}
+
+.edgePath path {
+  stroke: #333;
+  fill: #333;
+  stroke-width: 1.5px;
+}
+</style>
+
+<h1>Workflow Diagram</h1>
+
+<svg width=960 height=600><g/></svg>
+
+<script src="workflows.json"></script>
+<script src="sample.js"></script>
