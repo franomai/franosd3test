@@ -1,2 +1,6 @@
 # franosd3test
-DAGs r cool fun yes
+TODO:
+
+* Create package.json!
+* Sort out linting!
+* Sort out package structure!
