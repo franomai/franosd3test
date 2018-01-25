@@ -15,6 +15,7 @@ fs.createReadStream('./sample.csv')
       workflows[values[3]].states[values[0]] = {
         initial: values[1] === 'Y',
         final: values[2] === 'Y',
+        colour: 'fill: ' + (values[6] !== '' ? values[6] : '#f5f5f5'),
         actions: {}
       };
     }

@@ -10,7 +10,7 @@ for (var key in workflowInfo) {
   g.setNode(key, { label: key, clusterLabelPos: 'top', style: 'fill: #d3d3d3' });
   for (var state in thisWorkflow) {
     // Automatically label each of the nodes
-    g.setNode(key + '_' + state, { label: state, style: thisWorkflow[state].final ? 'fill: 	#ffb6c1' : (thisWorkflow[state].initial ? 'fill: #98fb98' : 'fill: #f5f5f5')});
+    g.setNode(key + '_' + state, { label: state, style: thisWorkflow[state].colour, shape: thisWorkflow[state].final ? "ellipse" : thisWorkflow[state].initial ? "circle" : "rect" });
     g.setParent(key + '_' + state, key);
   }
 
@@ -54,4 +54,4 @@ render(inner, g);
 var initialScale = 0.75;
 svg.call(zoom.transform, d3.zoomIdentity.translate((svg.attr('width') - g.graph().width * initialScale) / 2, 20).scale(initialScale));
 
-svg.attr('height', g.graph().height * initialScale + 40);
+svg.attr('height', g.graph().height * 2 + 40);
